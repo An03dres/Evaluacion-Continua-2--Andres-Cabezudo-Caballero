@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Retroceder en la página anterior</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+
+  .wrapper {
+    text-align: center;
+  }
+
+  .arrow {
+    animation: arrowBlink 1s infinite alternate;
+  }
+
+  @keyframes arrowBlink {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(10px);
+    }
+  }
+</style>
+</head>
+<body>
+<div class="wrapper">
+  <h1>¡Haz clic en la flecha para retroceder!</h1>
+  <a href="#" onclick="window.history.back(); return false;">
+    <img class="arrow" src="img/atras.png" alt="Flecha hacia atrás" width="100">
+  </a>
+</div>
+</body>
+</html>
